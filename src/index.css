@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Hanken Grotesk", sans-serif;
+
+  --color-surface: #161309;
+  --color-surface-dim: #161309;
+  --color-surface-bright: #3d392c;
+  --color-surface-container-lowest: #110e05;
+  --color-surface-container-low: #1f1b10;
+  --color-surface-container: #231f14;
+  --color-surface-container-high: #2e2a1e;
+  --color-surface-container-highest: #393528;
+  
+  --color-on-surface: #eae2cf;
+  --color-on-surface-variant: #d0c6ab;
+  
+  --color-primary: #fff5dc;
+  --color-on-primary: #3a3000;
+  --color-primary-container: #ffd600;
+  --color-on-primary-container: #705d00;
+  
+  --color-secondary: #c8c6c5;
+  --color-on-secondary: #303030;
+  --color-secondary-container: #474746;
+  --color-on-secondary-container: #b6b5b4;
+  
+  --color-tertiary-container: #00f0fc;
+  --color-on-tertiary-container: #00696f;
+  
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-success: #4CAF50;
+  --color-on-success: #000000;
+  --color-success-container: #1b5e20;
+
+  --color-outline: #999077;
+  --color-outline-variant: #4d4632;
+  
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  
+  --spacing-touch-target: 48px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-extrabold tracking-tight;
+  }
+}
+
+/* Industrial Background Grid */
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom Scrollbar for the industrial look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-surface;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-container-highest rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-outline;
+}
+

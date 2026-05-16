@@ -1,0 +1,10 @@
+{
+  "name": "Raksha-Kavach",
+  "description": "Industrial safety auditor and compliance tracker system.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
